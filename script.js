@@ -15,10 +15,10 @@ window.addEventListener('load', () => {
         particlesJS("particles-bg", {
             "particles": {
                 "number": {
-                    "value": 700, // INCREASED from 60
+                    "value": 1000, // INCREASED from 700 to fill the page
                     "density": {
                         "enable": true,
-                        "value_area": 800
+                        "value_area": 700 // DECREASED from 800 to make particles denser
                     }
                 },
                 "color": {
@@ -37,14 +37,14 @@ window.addEventListener('load', () => {
                 },
                 "line_linked": {
                     "enable": true,
-                    "distance": 150,
+                    "distance": 160, // INCREASED from 150 for longer lines
                     "color": "#c0a062", // Gold color for lines
-                    "opacity": 0.4, // INCREASED from 0.2
+                    "opacity": 0.4, 
                     "width": 0.7
                 },
                 "move": {
                     "enable": true,
-                    "speed": 4, // INCREASED from 1
+                    "speed": 2, // DECREASED from 4 to make it less chaotic
                     "direction": "none",
                     "random": true,
                     "straight": false,
@@ -57,7 +57,7 @@ window.addEventListener('load', () => {
                 "events": {
                     "onhover": {
                         "enable": true,
-                        "mode": "grab" // CHANGED from "repulse"
+                        "mode": "grab" 
                     },
                     "onclick": {
                         "enable": true,
@@ -66,14 +66,13 @@ window.addEventListener('load', () => {
                     "resize": true
                 },
                 "modes": {
-                    "grab": { // ADDED this new mode
+                    "grab": { 
                         "distance": 140,
                         "line_opacity": 1
                     },
                     "push": {
                         "particles_nb": 4
                     }
-                    // REMOVED "repulse" mode
                 }
             },
             "retina_detect": true
@@ -218,3 +217,4 @@ window.addEventListener('load', () => {
     }
 
 });
+
