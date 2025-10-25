@@ -276,8 +276,6 @@ a:hover {
   padding: 2.5rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  /* FIX: Start hidden to prevent flash */
-  opacity: 0;
 }
 
 .service-card:hover {
@@ -307,13 +305,9 @@ a:hover {
 
 .contact-info {
   max-width: 450px;
-  /* FIX: Start hidden to prevent flash */
-  opacity: 0;
 }
 
 .contact-form {
-  /* FIX: Start hidden to prevent flash */
-  opacity: 0;
 }
 
 .contact-info .section-header {
@@ -386,8 +380,6 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  /* FIX: Start hidden to prevent flash */
-  opacity: 0;
 }
 .footer-logo {
   font-family: "Cinzel", serif;
@@ -503,11 +495,17 @@ a:hover {
 }
 
 /*
-  FIX: Add new rules to hide section headers
-  that are animated on scroll.
+  Progressive enhancement for animations:
+  only hide elements if JS is running AND the page opted-in (.js-enabled).
+  This prevents elements from being stuck invisible when JS or plugins fail.
 */
-.services-section .section-header,
-#work .section-header {
+.js-enabled .service-card,
+.js-enabled .contact-info,
+.js-enabled .contact-form,
+.js-enabled .footer-container,
+.js-enabled .services-section .section-header,
+.js-enabled #work .section-header {
   opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
 }
-
