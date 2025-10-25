@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
         particlesJS("particles-bg", {
             "particles": {
                 "number": {
-                    "value": 100, // INCREASED from 60
+                    "value": 600, // INCREASED from 60
                     "density": {
                         "enable": true,
                         "value_area": 800
@@ -37,19 +37,19 @@ window.addEventListener('load', () => {
                 },
                 "line_linked": {
                     "enable": true,
-                    "distance": 150,
+                    "distance": 250,
                     "color": "#c0a062", // Gold color for lines
                     "opacity": 0.4, // INCREASED from 0.2
-                    "width": 1
+                    "width": 0.7
                 },
                 "move": {
                     "enable": true,
-                    "speed": 3, // INCREASED from 1
+                    "speed": 4, // INCREASED from 1
                     "direction": "none",
-                    "random": false,
+                    "random": true,
                     "straight": false,
                     "out_mode": "out",
-                    "bounce": false
+                    "bounce": true
                 }
             },
             "interactivity": {
