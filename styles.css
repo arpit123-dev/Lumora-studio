@@ -17,8 +17,8 @@ body {
   overflow-x: hidden;
 }
 
-/* FIX: This particle background is fixed and covers the 
-entire page, as you requested.
+/* This particle background is fixed and covers the 
+  entire page, as you requested.
 */
 #particles-bg {
   position: fixed;
@@ -53,68 +53,17 @@ h3 {
 
 p {
   margin-bottom: 1rem;
-  color: #d1d1d1; /* Hard-coded light gray */
+  color: #d1d1d1; /* Hard-coded light gray text */
 }
 
 a {
-  color: #c0a062; /* Hard-coded gold */
+  color: #c0a062; /* gold */
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  color: #a1824a; /* Hard-coded dark gold */
-}
-
-/* ===== UTILITY & BUTTONS ===== */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  border-radius: 50px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.btn-primary {
-  background-color: #c0a062; /* gold */
-  color: #0a0a0a; /* black */
-  border-color: #c0a062; /* gold */
-}
-.btn-primary:hover {
-  background-color: #a1824a; /* dark gold */
-  border-color: #a1824a; /* dark gold */
-  color: #0a0a0a; /* black */
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: #c0a062; /* gold */
-  border-color: #c0a062; /* gold */
-}
-.btn-secondary:hover {
-  background-color: rgba(192, 160, 98, 0.7); /* faded gold */
-  color: #0a0a0a; /* black */
-  border-color: rgba(192, 160, 98, 0.7); /* faded gold */
-}
-
-.section-header {
-  font-size: 3rem;
-  color: #c0a062; /* gold */
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.section-subheader {
-  font-size: 1.2rem;
-  color: #d1d1d1; /* light gray */
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
-  font-family: "Inter", sans-serif;
+  color: #e6cfa1; /* lighter gold */
 }
 
 /* ===== NAVBAR ===== */
@@ -125,154 +74,246 @@ a:hover {
   width: 100%;
   z-index: 100;
   padding: 1.5rem 0;
-  transition: background-color 0.3s ease, padding 0.3s ease;
+  background-color: transparent;
+  transition: background-color 0.4s ease, padding 0.4s ease;
 }
+
+/* This class is added by JS on scroll */
 .navbar.scrolled {
-  /* Glassmorphism effect */
-  background-color: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(10px);
   padding: 1rem 0;
+  /* Glassmorphism */
+  background-color: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-logo {
   font-family: "Cinzel", serif;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #ffffff; /* white */
+  letter-spacing: 1px;
 }
-.nav-logo:hover {
-  color: #c0a062; /* gold */
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
 }
+
 .nav-links a {
-  margin: 0 1rem;
-  color: #d1d1d1; /* light gray */
+  font-family: "Inter", sans-serif;
   font-weight: 500;
+  font-size: 1rem;
+  color: #d1d1d1; /* light gray */
 }
+
 .nav-links a:hover {
   color: #ffffff; /* white */
 }
+
 .nav-cta {
-  display: inline-block;
-  padding: 0.6rem 1.5rem;
-  background: #c0a062; /* gold */
-  color: #0a0a0a; /* black */
-  border-radius: 50px;
-  font-weight: 500;
-  font-size: 0.9rem;
+  display: block; /* Show CTA */
 }
-.nav-cta:hover {
-  background: #a1824a; /* dark gold */
-  color: #0a0a0a; /* black */
-}
-#nav-toggle-btn {
-  display: none;
+
+.nav-toggle {
+  display: none; /* Hide hamburger on desktop */
   background: none;
   border: none;
+  color: #ffffff;
+  font-size: 2rem;
   cursor: pointer;
 }
-#nav-toggle-btn span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #ffffff; /* white */
-  margin: 5px 0;
+
+/* ===== BUTTONS ===== */
+.btn {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #c0a062; /* gold */
+  color: #0a0a0a; /* black */
+  border-color: #c0a062; /* gold */
+}
+
+.btn-primary:hover {
+  background-color: #a38650; /* darker gold */
+  border-color: #a38650;
+  color: #0a0a0a; /* black */
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #c0a062; /* gold */
+  border-color: #c0a062;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(192, 160, 98, 0.1);
+  color: #e6cfa1; /* lighter gold */
+}
+
+.btn-submit {
+  background-color: #c0a062; /* gold */
+  color: #0a0a0a; /* black */
+  border-color: #c0a062;
+  width: 100%;
+  padding: 1rem;
+}
+.btn-submit:hover {
+  background-color: #a38650;
+  border-color: #a38650;
+  color: #0a0a0a;
 }
 
 /* ===== HERO SECTION ===== */
-.hero-section {
+.hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 100px;
-  position: relative;
-  /* FIX: Added a subtle overlay for readability */
-  background: linear-gradient(rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.3));
+  padding: 6rem 2rem 4rem 2rem;
 }
+
+.hero-content {
+  max-width: 900px;
+}
+
 .hero-tagline {
-  font-size: 1.5rem;
-  color: #d1d1d1; /* light gray */
+  font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  color: #c0a062; /* gold */
   margin-bottom: 1rem;
   font-weight: 400;
 }
+
 .hero-headline {
-  font-size: 5rem;
+  font-size: 4.5rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-  color: #ffffff; /* white */
 }
-.hero-headline-gradient {
-  display: block;
-  background: linear-gradient(90deg, #c0a062, #a1824a); /* gold gradient */
+
+.gradient-text {
+  background: linear-gradient(90deg, #e6cfa1, #a38650);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
+
 .hero-subheadline {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   max-width: 600px;
   margin: 0 auto 2.5rem auto;
   color: #d1d1d1; /* light gray */
-}
-.hero-cta-group a {
-  margin: 0 0.5rem;
+  opacity: 0.9;
 }
 
-/* ===== SERVICES SECTION ===== */
-.services-section {
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* ===== GENERAL SECTION STYLING ===== */
+.services-section,
+.work-section,
+.contact-section {
   padding: 6rem 0;
-  /* FIX: Removed the opaque background.
-    We'll add a semi-transparent glass effect to the cards instead.
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  /* FIX: Removed the dark background colors from here
+    so the particle animation is visible everywhere.
   */
 }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-header .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.section-header .section-subheader {
+  font-size: 1.25rem;
+  color: #c0a062; /* gold */
+  font-family: "Inter", sans-serif;
+  max-width: 600px;
+  margin: 0 auto; /* This will center it */
+}
+
+/* ===== SERVICES GRID ===== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  margin-top: 4rem;
 }
+
 .service-card {
   /* Glassmorphism card */
-  background: rgba(20, 20, 20, 0.5); /* Semi-transparent dark */
-  backdrop-filter: blur(5px);
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 2.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
+
 .service-card:hover {
-  background: rgba(30, 30, 30, 0.7);
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  border-color: rgba(192, 160, 98, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
 .service-card h3 {
   font-size: 1.5rem;
-  color: #c0a062; /* gold */
   margin-bottom: 1rem;
+  color: #e6cfa1; /* lighter gold */
+}
+
+/* ===== WORK SECTION (Placeholder) ===== */
+.work-section {
+  min-height: 50vh; /* Just giving it some space */
 }
 
 /* ===== CONTACT SECTION ===== */
-.contact-section {
-  padding: 6rem 0;
-  /* FIX: Removed the opaque background.
-    We'll make the form inputs glassy.
-  */
-}
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: flex-start;
 }
-.contact-info .section-header,
-.contact-info .section-subheader {
+
+.contact-info {
+  max-width: 450px;
+}
+
+.contact-info .section-title {
   text-align: left;
-  margin-left: 0;
-  margin-right: 0;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #d1d1d1; /* light gray */
+  margin-bottom: 2rem;
 }
 .contact-details p {
   font-size: 1.1rem;
@@ -311,36 +352,129 @@ a:hover {
   outline: none;
   border-color: #c0a062; /* gold */
 }
-.btn-submit {
-  background: #c0a062; /* gold */
-  color: #0a0a0a; /* black */
-  border: none;
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.btn-submit:hover {
-  background: #a1824a; /* dark gold */
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 /* ===== FOOTER ===== */
 .footer {
   padding: 4rem 0;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  /* FIX: Removed the opaque background.
-  */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 .footer-logo {
   font-family: "Cinzel", serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #ffffff; /* white */
+  color: #ffffff;
   margin-bottom: 1rem;
+  opacity: 0.8;
+}
+.footer p {
+  color: #d1d1d1;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  margin: 0;
 }
 .footer-tagline {
-  color: #888888; /* dark text */
-  font-size: 0.9rem;
   margin-top: 0.5rem;
+  font-style: italic;
+  font-family: "Cinzel", serif;
+  opacity: 0.5;
 }
+
+/* ===== RESPONSIVE STYLES ===== */
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  .nav-links {
+    gap: 1.5rem;
+  }
+  .hero-headline {
+    font-size: 3.5rem;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-info {
+    max-width: 100%;
+    text-align: center;
+  }
+  .contact-info .section-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    line-height: 1.6;
+  }
+  .nav-links {
+    display: none; /* Hide for now, needs JS to toggle */
+  }
+  .nav-cta {
+    display: none; /* Hide for now, needs JS to toggle */
+  }
+  .nav-toggle {
+    display: block; /* Show hamburger */
+  }
+  .hero {
+    min-height: 90vh;
+  }
+  .hero-headline {
+    font-size: 2.75rem;
+  }
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+  .hero-subheadline {
+    font-size: 1rem;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  .section-header .section-title {
+    font-size: 2.25rem;
+  }
+  .section-header .section-subheader {
+    font-size: 1.1rem;
+  }
+  .services-section,
+  .work-section,
+  .contact-section {
+    padding: 4rem 0;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .service-card {
+    padding: 2rem;
+  }
+  .contact-container {
+    padding: 0 1rem;
+  }
+  .footer {
+    padding: 3rem 1rem;
+  }
+}
+
