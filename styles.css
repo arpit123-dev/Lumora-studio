@@ -234,16 +234,22 @@ a:hover {
 .services-section,
 .work-section,
 .contact-section {
-  padding: 6rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  /* FIX: Removed the dark background colors from here
-    so the particle animation is visible everywhere.
+  /* FIX: Added 100px of padding-top to every section
+    to prevent it from mixing with the fixed navbar.
   */
+  padding: 100px 0 6rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* FIX: Made this style general.
+  It now applies to .section-header in *any* section,
+  not just services.
+*/
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
+  /* Add padding to account for navbar */
+  padding-top: 2rem; 
 }
 .section-header .section-title {
   font-size: 3rem;
@@ -306,9 +312,21 @@ a:hover {
   max-width: 450px;
 }
 
-.contact-info .section-title {
+/* FIX: Make the contact header left-aligned,
+  overriding the new centered .section-header style.
+*/
+.contact-info .section-header {
   text-align: left;
+  padding-top: 0;
+  margin-bottom: 1rem;
 }
+.contact-info .section-header .section-title {
+   margin-bottom: 1rem;
+}
+.contact-info .section-header .section-subheader {
+  margin: 0; /* Remove auto margin */
+}
+
 
 .contact-info p {
   font-size: 1.1rem;
@@ -409,7 +427,7 @@ a:hover {
     max-width: 100%;
     text-align: center;
   }
-  .contact-info .section-title {
+  .contact-info .section-header {
     text-align: center;
   }
 }
@@ -448,6 +466,13 @@ a:hover {
     max-width: 350px;
     margin: 0 auto;
   }
+  
+  /* FIX: Adjust section padding for mobile */
+  .services-section,
+  .work-section,
+  .contact-section {
+    padding: 80px 0 4rem 0; /* 80px top padding */
+  }
   .section-header {
     margin-bottom: 2rem;
   }
@@ -457,11 +482,7 @@ a:hover {
   .section-header .section-subheader {
     font-size: 1.1rem;
   }
-  .services-section,
-  .work-section,
-  .contact-section {
-    padding: 4rem 0;
-  }
+  
   .services-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
