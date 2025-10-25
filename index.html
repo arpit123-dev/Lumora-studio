@@ -24,12 +24,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- 
+    <!--
       Particles.js Background Div
     -->
     <div id="particles-bg"></div>
 
-    <!-- 
+    <!--
       CONTENT WRAPPER
     -->
     <div class="content-wrap">
@@ -37,6 +37,7 @@
       <header class="navbar">
         <div class="container">
           <a href="#hero" class="nav-logo">LUMORA</a>
+          <!-- FIX: Added id="nav-links" -->
           <nav class="nav-links" id="nav-links">
             <a href="#services">Services</a>
             <a href="#work">Work</a>
@@ -44,6 +45,7 @@
           </nav>
           <a href="#contact" class="btn btn-primary nav-cta">Start a Project</a>
           <button class="nav-toggle" id="nav-toggle-btn">
+             <!-- FIX: Use Font Awesome icon -->
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -69,8 +71,8 @@
         </div>
       </section>
 
-      <!-- 
-        FIX: ADDED SERVICES SECTION BACK 
+      <!--
+        FIX: ADDED SERVICES SECTION BACK
       -->
       <section id="services" class="services-section">
         <div class="container">
@@ -134,8 +136,8 @@
         </div>
       </section>
 
-      <!-- 
-        FIX: ADDED WORK SECTION BACK 
+      <!--
+        FIX: ADDED WORK SECTION BACK
       -->
       <section id="work" class="work-section">
         <div class="container">
@@ -153,7 +155,7 @@
               the team, and view exclusive project previews.
             </p>
             <a
-              href="https://discord.gg/YOUR_LINK_HERE"
+              href="https://discord.gg/YOUR_LINK_HERE" <!-- Remember to replace this -->
               class="btn btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
@@ -177,7 +179,7 @@
             <p>
               Reach out to discuss your project, and let's build something
               extraordinary.
-            </A>
+            </p> <!-- FIX: Closed the <p> tag -->
             <div class="contact-details">
               <p><strong>Email:</strong> contact@lumorastudios.com</p>
               <p><strong>Phone:</strong> +1 (234) 567-890</p>
@@ -186,7 +188,7 @@
 
           <form
             class="contact-form"
-            action="https://formspree.io/f/YOUR_UNIQUE_ID"
+            action="https://formspree.io/f/YOUR_UNIQUE_ID" <!-- Remember to replace this -->
             method="POST"
           >
             <div class="form-group">
@@ -215,19 +217,20 @@
       <footer class="footer">
         <div class="container footer-container">
           <div class="footer-logo">LUMORA</div>
-          
-          <!-- 
-            FIX: ADDED SOCIAL LINKS 
+
+          <!--
+            FIX: ADDED SOCIAL LINKS
           -->
           <div class="footer-socials">
             <a href="https://discord.gg/YOUR_LINK_HERE" class="social-link" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-discord"></i>
+              <i class="fab fa-discord"></i> <!-- Discord Icon -->
             </a>
             <a href="https://instagram.com/YOUR_USERNAME_HERE" class="social-link" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
             </a>
+            <!-- Add more links here if needed -->
           </div>
-          
+
           <p>&copy; 2024 LUMORA STUDIOS. All Rights Reserved.</p>
           <p class="footer-tagline">The Light Behind Every Vision.</p>
         </div>
@@ -235,8 +238,8 @@
     </div>
     <!-- End of .content-wrap -->
 
-    <!-- 
-      JAVASCRIPT LIBRARIES 
+    <!--
+      JAVASCRIPT LIBRARIES
     -->
     <!-- GSAP Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -250,3 +253,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
