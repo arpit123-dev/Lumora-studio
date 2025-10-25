@@ -89,7 +89,7 @@ window.addEventListener('load', () => {
     // ======== GSAP SCROLL-REVEAL ANIMATIONS ========
 
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        
+
         gsap.registerPlugin(ScrollTrigger);
 
         // --- Animate Navbar ---
@@ -170,7 +170,7 @@ window.addEventListener('load', () => {
             duration: 1,
             ease: "power3.out"
         });
-        
+
         gsap.from(".contact-form", {
             scrollTrigger: {
                 trigger: ".contact-container",
@@ -208,6 +208,7 @@ window.addEventListener('load', () => {
 
     // --- Mobile Nav Toggle ---
     const navToggleBtn = document.getElementById('nav-toggle-btn');
+    // FIX: Get navLinks by ID
     const navLinks = document.getElementById('nav-links');
 
     if (navToggleBtn && navLinks) {
@@ -215,24 +216,29 @@ window.addEventListener('load', () => {
             navLinks.classList.toggle('open');
             // Toggle hamburger icon to 'X'
             const icon = navToggleBtn.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+            if (icon) { // Check if icon exists
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
-        
+
         // Close menu when a link is clicked
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
                 const icon = navToggleBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                if (icon) { // Check if icon exists
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             });
         });
     }
 
 });
+
