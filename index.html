@@ -188,7 +188,6 @@
                 required
               ></textarea>
             </div>
-            <!-- FIX: Changed typeT="submit" to type="submit" -->
             <button type="submit" class="btn btn-submit">Send Message</button>
           </form>
         </div>
@@ -207,31 +206,19 @@
 
     <!-- 
       JAVASCRIPT LIBRARIES 
-      FIX: Added 'defer' to all scripts to prevent render-blocking.
+      FIX: Removed 'defer' from all scripts.
+      The 'window.onload' in script.js will handle all timing.
     -->
     <!-- GSAP Core -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      defer
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- GSAP ScrollTrigger Plugin -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      defer
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- particles.js script -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
-      defer
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-    <!-- 
-      Your Custom Script 
-      FIX: Added 'defer' back. The 'window.onload' in your
-      script.js will handle the timing correctly.
-    -->
-    <script src="script.js" defer></script>
+    <!-- Your Custom Script -->
+    <script src="script.js"></script>
   </body>
 </html>
 
