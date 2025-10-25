@@ -13,9 +13,7 @@
       rel="stylesheet"
     />
 
-    <!-- 
-      FIX: Removed the "./" from the path.
-    -->
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -23,7 +21,6 @@
       NEW: Particles.js Background Div
       (Replaces the old <canvas>)
     -->
-<!-- ... existing code ... -->
     <div id="particles-bg"></div>
 
     <!-- 
@@ -33,21 +30,184 @@
     <div class="content-wrap">
       <!-- ===== HEADER / NAVBAR ===== -->
       <header class="navbar">
-<!-- ... existing code ... -->
+        <div class="container">
+          <a href="#hero" class="nav-logo">LUMORA</a>
+          <nav class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <a href="#contact" class="btn btn-primary nav-cta">Start a Project</a>
+          <button class="nav-toggle" id="nav-toggle-btn">
+            &#9776;
+            <!-- Hamburger Icon -->
+          </button>
+        </div>
+      </header>
+
+      <!-- ===== HERO ===== -->
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <h2 class="hero-tagline">The Light Behind Every Vision.</h2>
+          <h1 class="hero-headline">
+            Cinematic Storytelling for
+            <br />
+            <span class="gradient-text">Visionary Brands.</span>
+          </h1>
+          <p class="hero-subheadline">
+            A full-service production house crafting world-class brand films,
+            music videos, and cinematic content.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#work" class="btn btn-primary">View Our Work</a>
+            <a href="#services" class="btn btn-secondary">Our Services</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES ===== -->
+      <section id="services" class="services-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+          </div>
+          <p class="section-subheader">
+            End-to-end production, from concept to final delivery.
+          </p>
+
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+              <h3>Brand Films & Ads</h3>
+              <p>
+                Cinematic Commercials, Product Films, Founder Stories, and
+                Corporate Videos.
+              </p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card">
+              <h3>Music Videos</h3>
+              <p>
+                Artist Visuals & Label Projects, and Story-Based Music Films.
+              </p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+              <h3>Creative Direction</h3>
+              <p>
+                Concept Development & Scripting, Storyboarding & Art Direction.
+              </p>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card">
+              <h3>Full-Suite Post-Production</h3>
+              <p>
+                High-End Editing & Color Grading, Sound Design & Mixing, and VFX.
+              </p>
+            </div>
+            <!-- Service 5 -->
+            <div class="service-card">
+              <h3>Cinematic Content Production</h3>
+              <p>
+                Strategic Brand Content (Reels, YouTube) and Motion Edits.
+              </p>
+            </div>
+            <!-- Service 6 -->
+            <div class="service-card">
+              <h3>Photoshoots</h3>
+              <p>
+                Product, Fashion, & Campaign, and Cinematic Portraits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== WORK ===== -->
+      <section id="work" class="work-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subheader">
+              A curated selection of our recent projects.
+            </p>
+          </div>
+          <!-- 
+            Gallery or project grid would go here.
+            For now, it's a placeholder section.
+          -->
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="contact-section">
+        <div class="container contact-container">
+          <div class="contact-info">
+            <h2 class="section-title">Let's Create Together</h2>
+            <p>
+              Have a vision? We’re here to help bring it to life. Reach out to
+              discuss your project.
+            </p>
+            <div class="contact-details">
+              <p><strong>Email:</strong> contact@lumorastudios.com</p>
+              <p><strong>Phone:</strong> +1 (234) 567-890</p>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/YOUR_UNIQUE_ID"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">Send Message</button>
+          </form>
+        </div>
       </section>
 
       <!-- ===== FOOTER ===== -->
       <footer class="footer">
         <div class="container footer-container">
-<!-- ... existing code ... -->
+          <div class="footer-logo">LUMORA</div>
+          <p>&copy; 2024 LUMORA STUDIOS. All Rights Reserved.</p>
+          <p class="footer-tagline">The Light Behind Every Vision.</p>
+        </div>
+      </footer>
+    </div>
+    <!-- End of .content-wrap -->
+
+    <!-- 
+      JAVASCRIPT LIBRARIES 
+    -->
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <!-- particles.js script -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- 
-      FIX: Removed the "./" from the path.
+      FIX: Removed the "defer" attribute.
+      The 'window.onload' in script.js handles the loading.
     -->
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
+
