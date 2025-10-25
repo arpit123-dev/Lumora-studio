@@ -15,10 +15,10 @@ window.addEventListener('load', () => {
         particlesJS("particles-bg", {
             "particles": {
                 "number": {
-                    "value": 1000, // INCREASED from 700 to fill the page
+                    "value": 150, // DECREASED from 1000 (for performance)
                     "density": {
                         "enable": true,
-                        "value_area": 700 // DECREASED from 800 to make particles denser
+                        "value_area": 800 // Back to a standard density
                     }
                 },
                 "color": {
@@ -37,14 +37,14 @@ window.addEventListener('load', () => {
                 },
                 "line_linked": {
                     "enable": true,
-                    "distance": 160, // INCREASED from 150 for longer lines
+                    "distance": 250, // INCREASED from 160 (to fill the screen with lines)
                     "color": "#c0a062", // Gold color for lines
-                    "opacity": 0.4, 
+                    "opacity": 0.3, // DECREASED slightly
                     "width": 0.7
                 },
                 "move": {
                     "enable": true,
-                    "speed": 2, // DECREASED from 4 to make it less chaotic
+                    "speed": 2,
                     "direction": "none",
                     "random": true,
                     "straight": false,
@@ -57,17 +57,17 @@ window.addEventListener('load', () => {
                 "events": {
                     "onhover": {
                         "enable": true,
-                        "mode": "grab" 
+                        "mode": "grab" // This will work again now
                     },
                     "onclick": {
                         "enable": true,
-                        "mode": "push" // Adds new particles on click
+                        "mode": "push"
                     },
                     "resize": true
                 },
                 "modes": {
-                    "grab": { 
-                        "distance": 140,
+                    "grab": {
+                        "distance": 150, // Increased distance
                         "line_opacity": 1
                     },
                     "push": {
