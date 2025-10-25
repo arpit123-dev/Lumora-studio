@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-/* This particle background is fixed and covers the 
+/* FIX: This particle background is fixed and covers the 
   entire page, as you requested.
 */
 #particles-bg {
@@ -182,6 +182,9 @@ a:hover {
 }
 
 /* ===== HERO SECTION ===== */
+/* NOTE: Hero is NOT set to opacity 0, 
+   because it animates on load, not on scroll.
+*/
 .hero {
   min-height: 100vh;
   display: flex;
@@ -234,22 +237,14 @@ a:hover {
 .services-section,
 .work-section,
 .contact-section {
-  /* FIX: Added 100px of padding-top to every section
-    to prevent it from mixing with the fixed navbar.
-  */
   padding: 100px 0 6rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* FIX: Made this style general.
-  It now applies to .section-header in *any* section,
-  not just services.
-*/
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
-  /* Add padding to account for navbar */
-  padding-top: 2rem; 
+  padding-top: 2rem;
 }
 .section-header .section-title {
   font-size: 3rem;
@@ -281,6 +276,8 @@ a:hover {
   padding: 2.5rem;
   border-radius: 8px;
   transition: all 0.3s ease;
+  /* FIX: Start hidden to prevent flash */
+  opacity: 0;
 }
 
 .service-card:hover {
@@ -310,11 +307,15 @@ a:hover {
 
 .contact-info {
   max-width: 450px;
+  /* FIX: Start hidden to prevent flash */
+  opacity: 0;
 }
 
-/* FIX: Make the contact header left-aligned,
-  overriding the new centered .section-header style.
-*/
+.contact-form {
+  /* FIX: Start hidden to prevent flash */
+  opacity: 0;
+}
+
 .contact-info .section-header {
   text-align: left;
   padding-top: 0;
@@ -385,6 +386,8 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  /* FIX: Start hidden to prevent flash */
+  opacity: 0;
 }
 .footer-logo {
   font-family: "Cinzel", serif;
@@ -497,5 +500,14 @@ a:hover {
   .footer {
     padding: 3rem 1rem;
   }
+}
+
+/*
+  FIX: Add new rules to hide section headers
+  that are animated on scroll.
+*/
+.services-section .section-header,
+#work .section-header {
+  opacity: 0;
 }
 
