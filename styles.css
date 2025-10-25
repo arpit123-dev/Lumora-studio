@@ -1,0 +1,346 @@
+/* ===== CSS RESET & GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a; /* Hard-coded black */
+  color: #d1d1d1; /* Hard-coded light gray text */
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* FIX: This particle background is fixed and covers the 
+entire page, as you requested.
+*/
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.content-wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  /* This is now fully transparent to show particles */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #ffffff; /* Hard-coded white */
+  line-height: 1.3;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #d1d1d1; /* Hard-coded light gray */
+}
+
+a {
+  color: #c0a062; /* Hard-coded gold */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a1824a; /* Hard-coded dark gold */
+}
+
+/* ===== UTILITY & BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: #c0a062; /* gold */
+  color: #0a0a0a; /* black */
+  border-color: #c0a062; /* gold */
+}
+.btn-primary:hover {
+  background-color: #a1824a; /* dark gold */
+  border-color: #a1824a; /* dark gold */
+  color: #0a0a0a; /* black */
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #c0a062; /* gold */
+  border-color: #c0a062; /* gold */
+}
+.btn-secondary:hover {
+  background-color: rgba(192, 160, 98, 0.7); /* faded gold */
+  color: #0a0a0a; /* black */
+  border-color: rgba(192, 160, 98, 0.7); /* faded gold */
+}
+
+.section-header {
+  font-size: 3rem;
+  color: #c0a062; /* gold */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.section-subheader {
+  font-size: 1.2rem;
+  color: #d1d1d1; /* light gray */
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem 0;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+.navbar.scrolled {
+  /* Glassmorphism effect */
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  font-family: "Cinzel", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff; /* white */
+}
+.nav-logo:hover {
+  color: #c0a062; /* gold */
+}
+.nav-links a {
+  margin: 0 1rem;
+  color: #d1d1d1; /* light gray */
+  font-weight: 500;
+}
+.nav-links a:hover {
+  color: #ffffff; /* white */
+}
+.nav-cta {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: #c0a062; /* gold */
+  color: #0a0a0a; /* black */
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.nav-cta:hover {
+  background: #a1824a; /* dark gold */
+  color: #0a0a0a; /* black */
+}
+#nav-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#nav-toggle-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ffffff; /* white */
+  margin: 5px 0;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+  position: relative;
+  /* FIX: Added a subtle overlay for readability */
+  background: linear-gradient(rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.3));
+}
+.hero-tagline {
+  font-size: 1.5rem;
+  color: #d1d1d1; /* light gray */
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.hero-headline {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  color: #ffffff; /* white */
+}
+.hero-headline-gradient {
+  display: block;
+  background: linear-gradient(90deg, #c0a062, #a1824a); /* gold gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.hero-subheadline {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  color: #d1d1d1; /* light gray */
+}
+.hero-cta-group a {
+  margin: 0 0.5rem;
+}
+
+/* ===== SERVICES SECTION ===== */
+.services-section {
+  padding: 6rem 0;
+  /* FIX: Removed the opaque background.
+    We'll add a semi-transparent glass effect to the cards instead.
+  */
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  /* Glassmorphism card */
+  background: rgba(20, 20, 20, 0.5); /* Semi-transparent dark */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.service-card:hover {
+  background: rgba(30, 30, 30, 0.7);
+  transform: translateY(-5px);
+}
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #c0a062; /* gold */
+  margin-bottom: 1rem;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  padding: 6rem 0;
+  /* FIX: Removed the opaque background.
+    We'll make the form inputs glassy.
+  */
+}
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+.contact-info .section-header,
+.contact-info .section-subheader {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.contact-details p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #d1d1d1; /* light gray */
+}
+.contact-details p strong {
+  color: #c0a062; /* gold */
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: "Cinzel", serif;
+  color: #d1d1d1; /* light gray */
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  /* Glassmorphism input */
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: #ffffff; /* white */
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c0a062; /* gold */
+}
+.btn-submit {
+  background: #c0a062; /* gold */
+  color: #0a0a0a; /* black */
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background: #a1824a; /* dark gold */
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 4rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* FIX: Removed the opaque background.
+  */
+}
+.footer-logo {
+  font-family: "Cinzel", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff; /* white */
+  margin-bottom: 1rem;
+}
+.footer-tagline {
+  color: #888888; /* dark text */
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
