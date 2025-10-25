@@ -260,36 +260,68 @@ a:hover {
   margin: 0 auto; /* This will center it */
 }
 
-/* ===== SERVICES GRID ===== */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
-}
+<!-- ===== SERVICES SECTION ===== -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subheader">
+        End-to-end production, from concept to final delivery.
+      </p>
+    </div>
 
-.service-card {
-  /* Glassmorphism card */
-  background: rgba(20, 20, 20, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(192, 160, 98, 0.5);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.service-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #e6cfa1; /* lighter gold */
-}
-
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card">
+        <h3>Brand Films & Ads</h3>
+        <p>
+          Cinematic Commercials, Product Films, Founder Stories, and
+          Corporate Videos that define your brand's identity.
+        </p>
+      </div>
+      <!-- Card 2 -->
+      <div class="service-card">
+        <h3>Music Videos</h3>
+        <p>
+          Artist Visuals, Label Projects, and Story-Based Music Films that
+          resonate with audiences and capture the artist's vision.
+        </p>
+      </div>
+      <!-- Card 3 -->
+      <div class="service-card">
+        <h3>Creative Direction</h3>
+        <p>
+          Concept Development, Scripting, Storyboarding, and Art
+          Direction to build the world your story lives in.
+        </p>
+      </div>
+      <!-- Card 4 -->
+      <div class="service-card">
+        <h3>Full-Suite Post-Production</h3>
+        <p>
+          High-End Editing, Color Grading, Sound Design & Mixing, and
+          VFX to bring your footage to its full cinematic potential.
+        </p>
+      </div>
+      <!-- Card 5 -->
+      <div class="service-card">
+        <h3>Cinematic Content</h3>
+        <p>
+          Strategic Brand Content for Reels & YouTube, and dynamic Motion
+          Edits designed for social impact.
+        </p>
+      </div>
+      <!-- Card 6 -->
+      <div class="service-card">
+        <h3>Photoshoots</h3>
+        <p>
+          Product, Fashion, & Campaign photography, as well as Cinematic
+          Portraits that tell a story in a single frame.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 /* ===== WORK SECTION (Placeholder) ===== */
 .work-section {
   min-height: 50vh; /* Just giving it some space */
