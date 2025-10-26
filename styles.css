@@ -288,8 +288,8 @@ a:hover {
 }
 
 /*.js-enabled .service-card {
-  opacity: 1;*/
-}
+  opacity: 1;
+}*/
 
 
 .service-card:hover {
@@ -320,8 +320,8 @@ a:hover {
 }
 
 /*.js-enabled .work-content {
-  opacity: 1;*/
-}
+  opacity: 1;
+}*/
 
 
 /* ===== CONTACT SECTION ===== */
@@ -337,16 +337,16 @@ a:hover {
 }
 
 /*.js-enabled .contact-info {
-  opacity: 0;*/
-}
+  opacity: 0;
+}*/
 
 .contact-form {
   opacity: 1; /* Default state */
 }
 
 /*.js-enabled .contact-form {
-  opacity: 0;*/
-}
+  opacity: 0;
+}*/
 
 
 .contact-info .section-header {
@@ -420,8 +420,8 @@ a:hover {
 }
 
 /*.js-enabled .footer-container {
-  opacity: 0;*/
-}
+  opacity: 0;
+}*/
 
 .footer-logo {
   font-family: "Cinzel", serif;
