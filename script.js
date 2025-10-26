@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
         particlesJS("particles-bg", {
             "particles": {
                 "number": {
-                    "value": 150, // Balanced particle count
+                    "value": 650, // Balanced particle count
                     "density": {
                         "enable": true,
                         "value_area": 800
