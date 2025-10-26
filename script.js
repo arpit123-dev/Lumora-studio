@@ -87,7 +87,7 @@ window.addEventListener('load', () => {
 
 
     // ======== GSAP SCROLL-REVEAL ANIMATIONS ========
-
+    setTimeout(() => {
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
 
         gsap.registerPlugin(ScrollTrigger);
@@ -204,7 +204,8 @@ window.addEventListener('load', () => {
         console.error("GSAP or ScrollTrigger library not loaded.");
         document.documentElement.classList.remove('js-enabled'); // Show all content if GSAP fails
     }
-
+      
+    }, 100); // 100ms delay
 
     // --- Mobile Nav Toggle ---
     const navToggleBtn = document.getElementById('nav-toggle-btn');
