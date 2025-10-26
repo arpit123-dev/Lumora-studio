@@ -287,8 +287,8 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-.js-enabled .service-card {
-  opacity: 1;
+/*.js-enabled .service-card {
+  opacity: 1;*/
 }
 
 
@@ -319,8 +319,8 @@ a:hover {
   opacity: 0.9;
 }
 
-.js-enabled .work-content {
-  opacity: 1;
+/*.js-enabled .work-content {
+  opacity: 1;*/
 }
 
 
@@ -336,16 +336,16 @@ a:hover {
   max-width: 450px;
 }
 
-.js-enabled .contact-info {
-  opacity: 0;
+/*.js-enabled .contact-info {
+  opacity: 0;*/
 }
 
 .contact-form {
   opacity: 1; /* Default state */
 }
 
-.js-enabled .contact-form {
-  opacity: 0;
+/*.js-enabled .contact-form {
+  opacity: 0;*/
 }
 
 
