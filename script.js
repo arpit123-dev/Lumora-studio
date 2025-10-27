@@ -144,10 +144,10 @@ window.addEventListener('load', () => {
   },
   opacity: 0,
   y: 50,
-  duration: 0.8,
+  duration: 1,
   ease: "power3.out",
   stagger: 0.2,
-  immediateRender: false
+  immediateRender: true
 });
 
             // --- Animate the "Work" section header & content ---
