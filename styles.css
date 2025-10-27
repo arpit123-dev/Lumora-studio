@@ -9,18 +9,27 @@
   box-sizing: border-box;
 }
 
-/* FIX: Added smooth scroll */
+/* Added smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* FIX: Added no-js class to html */
+/* no-js class for initial visibility */
 html.no-js .service-card,
 html.no-js .work-content,
 html.no-js .contact-info,
 html.no-js .contact-form,
 html.no-js .footer-container {
   opacity: 1;
+}
+
+/* js-enabled hides until animation */
+.js-enabled .service-card,
+.js-enabled .work-content,
+.js-enabled .contact-info,
+.js-enabled .contact-form,
+.js-enabled .footer-container {
+  opacity: 0; /* Hide until GSAP animates */
 }
 
 body {
@@ -199,7 +208,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* FIX: Adjusted padding */
+  /* Adjusted padding */
   padding: calc(var(--nav-height) + 4rem) 2rem 4rem 2rem;
 }
 
@@ -276,6 +285,15 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   margin-top: 4rem;
+  /* Force reflow stability */
+  width: 100%;
+}
+
+/* Fallback for un-animated states */
+.service-card,
+.work-content {
+  opacity: 1; /* Fallback if JS fails */
+  transition: opacity 0.3s ease; /* Smooth fallback fade */
 }
 
 .service-card {
@@ -286,11 +304,6 @@ a:hover {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
-
-/*.js-enabled .service-card {
-  opacity: 1;
-}*/
-
 
 .service-card:hover {
   transform: translateY(-8px);
@@ -319,11 +332,6 @@ a:hover {
   opacity: 0.9;
 }
 
-/*.js-enabled .work-content {
-  opacity: 1;
-}*/
-
-
 /* ===== CONTACT SECTION ===== */
 .contact-container {
   display: grid;
@@ -336,18 +344,9 @@ a:hover {
   max-width: 450px;
 }
 
-/*.js-enabled .contact-info {
-  opacity: 0;
-}*/
-
 .contact-form {
   opacity: 1; /* Default state */
 }
-
-/*.js-enabled .contact-form {
-  opacity: 0;
-}*/
-
 
 .contact-info .section-header {
   text-align: left;
@@ -419,10 +418,6 @@ a:hover {
   padding: 0 2rem;
 }
 
-/*.js-enabled .footer-container {
-  opacity: 0;
-}*/
-
 .footer-logo {
   font-family: "Cinzel", serif;
   font-size: 1.5rem;
@@ -444,8 +439,7 @@ a:hover {
   opacity: 0.5;
 }
 
-/* FIX: NEW FOOTER SOCIALS
-*/
+/* NEW FOOTER SOCIALS */
 .footer-socials {
   margin: 1.5rem 0;
   display: flex;
@@ -461,7 +455,6 @@ a:hover {
   color: #c0a062;
   transform: scale(1.2);
 }
-
 
 /* ===== RESPONSIVE STYLES ===== */
 
@@ -494,14 +487,14 @@ a:hover {
   }
 
   .nav-links {
-    /* FIX: Mobile menu styles */
-    display: flex; /* Keep as flex */
+    /* Mobile menu styles */
+    display: flex;
     flex-direction: column;
     position: fixed;
     top: 0;
     right: -100%; /* Start off-screen */
     width: 60%;
-    max-width: 300px; /* Add max-width */
+    max-width: 300px;
     height: 100vh;
     background: rgba(10, 10, 10, 0.9);
     backdrop-filter: blur(10px);
@@ -509,10 +502,10 @@ a:hover {
     align-items: center;
     gap: 2rem;
     transition: right 0.5s ease-in-out;
-    z-index: 100; /* Ensure it's below toggle */
+    z-index: 100;
   }
 
-  /* FIX: Mobile menu open state */
+  /* Mobile menu open state */
   .nav-links.open {
     right: 0; /* Slide in */
   }
@@ -578,4 +571,3 @@ a:hover {
     padding: 3rem 1rem;
   }
 }
-
