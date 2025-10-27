@@ -135,21 +135,20 @@ window.addEventListener('load', () => {
             });
 
             // --- Animate the service cards ---
-            gsap.from(".service-card", {
-                scrollTrigger: {
-                    trigger: ".services-grid",
-                    start: "top 80%",
-                    toggleActions: "play none none none",
-                    // Force refresh for grid stability
-                    onRefresh: () => ScrollTrigger.refresh()
-                },
-                opacity: 0,
-                y: 50,
-                duration: 0.8,
-                ease: "power3.out",
-                stagger: 0.2,
-                immediateRender: false
-            });
+           gsap.from(".service-card", {
+  scrollTrigger: {
+    trigger: ".services-grid",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    markers: false, // optional, set to true for debugging
+  },
+  opacity: 0,
+  y: 50,
+  duration: 0.8,
+  ease: "power3.out",
+  stagger: 0.2,
+  immediateRender: false
+});
 
             // --- Animate the "Work" section header & content ---
             gsap.from(".work-section .section-header, .work-content", {
