@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- FIX: Added lang="en" and class="no-js" -->
+<!-- Added lang="en" and class="no-js" for progressive enhancement -->
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
@@ -14,30 +14,26 @@
       rel="stylesheet"
     />
 
-    <!-- NEW: Font Awesome for social icons -->
+    <!-- Font Awesome for social icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
     <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body>
-    <!--
-      Particles.js Background Div
-    -->
+    <!-- Particles.js Background Div -->
     <div id="particles-bg"></div>
 
-    <!--
-      CONTENT WRAPPER
-    -->
+    <!-- CONTENT WRAPPER -->
     <div class="content-wrap">
       <!-- ===== HEADER / NAVBAR ===== -->
       <header class="navbar">
         <div class="container">
           <a href="#hero" class="nav-logo">LUMORA</a>
-          <!-- FIX: Added id="nav-links" -->
+          <!-- Added id="nav-links" for JS targeting -->
           <nav class="nav-links" id="nav-links">
             <a href="#services">Services</a>
             <a href="#work">Work</a>
@@ -45,7 +41,7 @@
           </nav>
           <a href="#contact" class="btn btn-primary nav-cta">Start a Project</a>
           <button class="nav-toggle" id="nav-toggle-btn">
-             <!-- FIX: Use Font Awesome icon -->
+            <!-- Use Font Awesome icon -->
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -174,7 +170,7 @@
             <p>
               Reach out to discuss your project, and let's build something
               extraordinary.
-            </p> <!-- FIX: Closed the <p> tag -->
+            </p>
             <div class="contact-details">
               <p><strong>Email:</strong> contact@lumorastudios.com</p>
               <p><strong>Phone:</strong> +1 (234) 567-890</p>
@@ -212,9 +208,7 @@
         <div class="container footer-container">
           <div class="footer-logo">LUMORA</div>
 
-          <!--
-            FIX: ADDED SOCIAL LINKS
-          -->
+          <!-- ADDED SOCIAL LINKS -->
           <div class="footer-socials">
             <a href="https://discord.gg/YOUR_LINK_HERE" class="social-link" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-discord"></i> <!-- Discord Icon -->
@@ -232,9 +226,7 @@
     </div>
     <!-- End of .content-wrap -->
 
-    <!--
-      JAVASCRIPT LIBRARIES
-    -->
+    <!-- JAVASCRIPT LIBRARIES -->
     <!-- GSAP Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- GSAP ScrollTrigger Plugin -->
@@ -244,7 +236,6 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- Your Custom Script -->
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>
-
